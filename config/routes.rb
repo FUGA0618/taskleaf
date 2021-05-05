@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'sessions/new'
+  get 'login', to: 'sessions#new'
+
   namespace :admin do
     resources :users
   end
