@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'login', to: 'sessions#new'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
 
   namespace :admin do
     resources :users
